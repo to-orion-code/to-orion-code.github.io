@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+/* pour revenir a la ligne; alt z */
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: "Advent Pro", sans-serif;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+     height: 100vh;
+     background-size: cover;
+    
+    }
+/* padding; tout ce qui ce met avant la bordure * et margin; extérieur */
+
+ul {
+    padding:0 ;
+    margin: 0 ;   
+}
+
+li{
+    list-style-type:none ;             /* none; pas de style pour tout ce qui est li ( pas de petit point a gauche etc...)  */
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;                 /* pour avoir de la place au dessur des titre */
+    font-size: 2em;
+} 
+
+a{
+    text-decoration: none ;            /* none; enlève le soulignement des liens */
+    color: black;
+}
+
+
+
+
+
+/* ******************************************** NAVBAR *************************************************************************** **/
+ nav {
+
+overflow: hidden;                                                                            /* tout ce qui dépasse sera caché */
+background-color: #fffae1;
+position: fixed;                                                                             /* pour fixer la nav bar elle descent en meme temps que le scroll */
+width: 100% ;                                                                                /* elle occupe toute la largeur ( soit 100% ) de la page quelle que soit la page */
+opacity: 0.9;                                                                                /* transparent réglage entre 0 et 1 */
+}
+
+
+/* dans le header on veut joindre les 4 li */
+/* on met pas directement li car y en a plusieur donc on prend ceux du header */
+
+header li {
+float: right;                                                                                /* flotter a droite */
+font-size: 1.2em;                                                                            /* em ca s'ajuste a la page ( plus la fenêtre grandi et plus le caractère aussi donc ca scale !  */
+}
+
+header li a {
+text-decoration: none;
+display: block;
+text-align: center;
+padding: 18px 16px;                                                                          /* en haut en bas on laisse une marge de 18px et sur les coté une marge de 16px  ( si je met que deux élément le premier veux dire en haut et en bas et le deuxième à gauche a droite  */
+     /* deux valeur = vertical | horizontal */
+
+}
+
+#hcck{  
+font-family: 'Dancing Script', cursive;                                                      /* # pour l'id hcck comme . pour class */
+font-weight: bold;    
+float: left;
+}
+
+/* *************************************** IMAGE PRINCIPALE ********************************************************************** */
+#imagePrincipale {
+  padding-top: 60px;                                                                         /* 60 px au dessu de hcck ce qui fait que la nav bar ce colle en haut */
+  background: url(./media/paysage2.JPG) no-repeat fixed 38% 62%;      /* l'image ne se répète pas  elle est fixé et centré avec les 50% 50% */
+  background-size:cover;                                                                     /* ca scale l'image si on aggrandi sur la largeur etc... responsive */
+  height: 799px ;                                                                            /* taille de l'image pour qu'elle apparaisse en grand et quelle ne soit pas écrasé */
+  
+}
+
+h1 { 
+   font-family: "Dancing script", cursive ;
+   text-align: center;
+   color: antiquewhite;
+   font-size: 6em;
+   margin-top: 100px ;
+   text-shadow: 1px 3px 2px black ;
+
+}
+
+#premierTrait {
+   height: 1px ;                    /* taille */
+   width: 25% ;                     /* largeur */
+   margin: -3px auto ;              /* haut | horizontal | bas ( -3 pour que les élèments se rapprocher vers lui et auto ca centre ) */
+   background-color: #fffae1;
+   box-shadow: 5px 2.5px 3px black ;
+} 
+
+h3{
+   text-align: center ;
+   color: antiquewhite;
+   font-size: 3em;
+   text-shadow: 1px 3px 2px black ;
+ }
+
+ /* ********************************PRESENTATION*******************************:************** */
+#presentation {
+    height: 600px;
+    background-color: #fffae1;
+    padding: 100px 0px 100px 0 ;       /* haut droite bas gauche  ( sens des aiguille d'une montre ) */
+}
+
+#textintro {
+padding: 0px 20%;                     /* 25% de chaque coté sur l'axe horizontal */
+text-align: center;
+}
+
+#prestations {
+display: flex;                                              /* aligne le contenu  */
+flex-wrap: wrap;
+justify-content: space-between;        /* le space between ca répartie nos éléments sur toute la lageur uniformément */
+padding: 30px 10%;
+text-align: center;
+}
+
+.imagesPrestations h4 {                  /* on cherche précisement le h4 ! */
+
+font-family: "Dancing Script", cursive;
+font-size: 1.8em;
+margin: 15px;
+font-weight: 300;
+}
+
+.imagesPrestations img{
+    border-radius: 10px;
+    border-bottom-left-radius: 100px;
+    box-shadow: 6px 6px 10px 2px #DE5F40;
+
+}
+.imagesPrestations img:hover {
+opacity: 0.6;
+transform: scale(1.05);
+transition: 0.6s ease-in-out;
+
+}
+
+/* **********************************TOURISME************************************************ */
+
+#tourisme {
+    height:3950px ;
+    
+}
+
+#tourisme h2 {
+    padding-top: 60px;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr)0.5fr;
+    grid-template-rows: 0.5fr repeat(6, 1fr) 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    flex-wrap: wrap;
+    justify-content: space-between;                                             /* aligne le contenu  */
+     
+}
+.boxgauche { 
+  
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: #fffae1;
+}
+    
+    .milieuhaut { 
+   
+    grid-area: 1 / 2 / 2 / 5; 
+    background-color: #fffae1
+    
+}
+
+.colonnegauche { 
+   
+    grid-area: 2 / 1 / 8 / 2;
+    background-color: #fffae1;
+
+}
+.bas {
+ 
+    grid-area: 8 / 1 / 9 / 6; 
+    background-color: #fffae1;
+    
+}
+
+.colonnedroite { 
+  
+    grid-area: 2 / 5 / 8 / 6; 
+    background-color: #fffae1;
+}
+.milieu {
+    
+   
+    grid-area: 2 / 2 / 8 / 5;
+    
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    padding: 35px;
+    max-height: 2500px;
+}
+
+
+
+.boxdroite {
+   
+    grid-area: 1 / 5 / 2 / 6; 
+    background-color: #fffae1
+    
+
+} 
+    
+    
+#img1 {
+    background: url( ./media/arche.jpg);
+    border: 4px solid;
+    border-color: #fffae1;
+    height: 600px;
+    width: 400px;
+    display: inline-block;
+    
+}   
+#img2{
+    background: url( ./media/chine.jpg);
+    border: 4px solid;
+    border-color: #fffae1;
+    height: 600px;
+    width: 400px;
+    display: inline-block;
+}
+#img3{
+    background: url( ./media/taj.jpg);
+    border: 4px solid;
+    border-color: #fffae1;
+    height: 650px;
+    width: 433px;
+    display: inline-block;
+}   
+#img4 {
+    background: url( ./media/land.jpg) no-repeat;
+    border: 4px solid;
+    border-color: #fffae1;
+    height: 650px;
+    width: 487px;
+    display: inline-block;
+ 
+}
+
+#tourisme li {
+    
+    margin: 65px 200px 0  100px;
+    max-width: 550px no-repeat;                                            /* depasse pas 550px */
+    box-shadow: 6px 6px 28px -1px #fffae1;
+    float: left;
+   
+
+}
+
+#tourisme #img2 ,  #tourisme  #img4 {
+    float: right;   
+    margin: 65px 100px 0  200px;
+   }
+     
+   
+   #img2 h4, #img4 h4 {
+       float: left;
+       background-color: #DE5F40;
+       margin-left: -180px;
+       box-shadow: -4px 4px 0 1px #fffae1;
+     }
+
+    
+#tourisme h4 { 
+    height: 45px;
+    width: 235px;
+    background-color:#DE5F40 ;
+    float: right;
+    margin: 50px -180px 0 10%;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 0 1px #fffae1;
+    border-radius: 5px;
+    font-weight: 300;
+}
+    #img2 h4, #img4 h4 {
+        float: left;
+        background-color: #DE5F40;
+        margin-left: -180px;
+        box-shadow: -4px 4px 0 1px #fffae1;
+      }
+
+
+article{
+    margin: -400px 20px 0px 20px;
+    transform: scale(1);
+    height: 150px;
+    width: 600px;
+    border: 4px solid;
+    border-color: #DE5F40;
+    box-shadow: 6px 6px 28px -1px #DE5F40;;
+    float: left;
+    font-size: 1.5em;
+    background-color: #DE5F40;
+    border-radius: 5px;
+}
+ 
+    
+  #tourisme p{
+    border-radius: 5px;
+    margin-top: 300px;
+    transform: scale(1);
+    height: 150px;
+    width: 600px;
+    border: 4px solid;
+    border-color: #DE5F40;;
+    box-shadow: 6px 6px 28px -1px #DE5F40;
+    display: inline-block;
+    font-size: 1.5em;
+    background-color: #DE5F40;
+    
+}     
+
+/* .user{
+    
+     border: 2px solid;
+     border-color: #fffae1;
+     box-shadow: 6px 6px 28px -1px #fffae1;
+     height: 200px;
+     width: 500px;
+     float: inline-start;
+     background-color: #DE5F40;
+    
+} */
+
+
+
+
+
+
+
+/* ************************************footer***************************************************** */
+
+footer{
+    background-color:#fffae1;
+    color:#C87E4F ;
+    padding : 20px 0 10px 0;
+    text-align: center;
+}
+form{
+    margin: 0 auto;                                     /* en haut et en bas on met rien et auto ca centre  */
+    max-width: 900px;                                   /* le formulaire ne va pas s'agrandire a l'infini */
+} 
+input,textarea {
+border: none; 
+width: 55%;                                              /* pour que ca soit aligné */
+padding: 15px 10px;
+margin: 1px ;                                            /* les boutton se crée une marge de 1px entre eux */
+font-size: 1.2em;
+font-family: "Advent Pro", sans-sherif;
+border-radius: 8px;
+background-color: #fffae1;
+}
+
+button{
+    border: none; 
+    width: 57.8%;   
+    padding: 15px ;
+    margin: 1px ; 
+    font-size: 1.5em;
+    font-family: "Advent Pro", sans-sherif;
+    border: 2px solid;
+    border-color: #C87E4F;
+    background-color: #fffae1;
+    border-radius: 8px;
+}
+input{
+    
+    border: 2px solid;
+    border-color:#C87E4F;}
+
+    textarea{
+
+    height: 120px;
+    border: 2px solid;
+    border-color: #C87E4F;
+}
+button:hover{
+    border: 5px solid;
+    border-color: lid;
+    border-color:#DE5F40;
+    background-color: #DE5F40;
+    color: #fffae1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out ;                         /* ease-in-out;   lent au début et lent a la fin la transi*/
+}
+
+#deuxièmeTrait {
+    
+    height: 2px;
+    width: 78%;
+    background-color: #C87E4F;
+    margin: 60px auto;                                     /* 60 haut 60 bas et auto bas gauche */
+   
+}
+#copyrightEtIcons{
+    display: flex;                                         /* en ayant mis flex tout ce met en ligne  */
+    margin-bottom: 20px;                                   /* rajoute de la marge en bas */
+    padding: 0 10%;                                        /* colle pas les bords  */
+}
+#copyright{
+    width: 50%;
+    text-align: left;
+    color: #C87E4F;
+    font-size: 1.3em;
+}
+
+#icons {
+    width: 50%;                                             /* pour que le texte si il est long reste sur une ligne grace a la largeur plus grande */
+    text-align: right; 
+
+}
+
+#icons a {
+ display: inline-block;                                      /* il se mettent en ligne les icone */            
+ padding: 0 15px ;                                           /* écart entre eux  et mieux que margin pour l'effet hover*/
+ font-size: 1.5em;
+ color: #C87E4F;
+}
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 0.1s;
+}
