@@ -1,0 +1,31 @@
+body {
+  background-color: #E6E6E6;
+  font-family: Arial, sans-serif;
+}
+h1, h2, h3 {
+  text-align: center;
+}
+/* Ajoutez ceci à votre feuille de style */
+
+/* Style de base pour les boutons */
+.register-btn, .attendees-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  /* Style pour le bouton "S'inscrire" */
+  .register-btn {
+    background-color: #4CAF50; /* vert */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Ajoutez une animation au survol du bouton "S'inscrire" */
+  .register-btn:hover {
+    background-color: #3E8E41; /* vert foncé */
+    cursor: pointer;
+  }
+  
